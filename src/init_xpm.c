@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 00:29:54 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 13:25:43 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:35:21 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ bool	init_sprites(void *ptr, t_imgs *a, bool (*init_asset)(void *, t_imgs*))
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->key, "keys/key_16px", 8);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->player, "dino/dino", 4);
+		a->err += !create_sprite(ptr, &a->player, "player/player_16px", 12);
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->a, "tp_pad/a/tp_a_16px", 8);
 	if (!a->err)
@@ -135,7 +135,7 @@ bool	init_world_imgs(t_params *prm)
 	bool	err;
 
 	err = !create_sprite(prm->mlx.ptr, &prm->world.pane,
-			"w_map/pane/mountain", 3);
+			"w_map/pane/moutain", 3);
 	if (!err)
 		err += !create_sprite(prm->mlx.ptr, &prm->world.pad,
 				"w_map/lvl_pad/lvl_pad_", 2);

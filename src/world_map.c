@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 14:48:31 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 06:01:45 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:25:13 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,8 @@ void	display_world_map(t_params *prm)
 
 bool	start_game(t_params *param, char **worlds, int nb_worlds)
 {
-	init_world(param);
+	if (init_world(param))
+		return (close_game(param), false);
 	param->world.worlds = worlds;
 	param->world.nb_worlds = nb_worlds;
 	param->world.w_completed = 0;

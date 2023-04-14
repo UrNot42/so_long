@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 02:55:57 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 01:06:28 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 12:08:37 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ bool	fill_map(char ***map, int fd)
 		(*map) = ft_realloc(*map,
 				sizeof(char *) * (i + 2), sizeof(char *) * i);
 		if (!(*map))
-			return (free_double_str(*map), false);
+			return (get_next_line(-1), false);
 		(*map)[i] = buffer;
 		(*map)[i][ft_strlen(buffer) - 1] = 0;
 		j = -1;
 		while ((*map)[i][++j])
 			if (!is_tile((*map)[i][j]))
-				return (free_double_str(*map), false);
+				return (get_next_line(-1), false);
 		i++;
 		buffer = get_next_line(fd);
 	}
@@ -53,8 +53,11 @@ bool	init_map(char *file, char ***map, bool silenced)
 	if (fd == -1)
 		return ((void)(silenced || (error_msg(6), 0)), false);
 	if (!fill_map(map, fd) || !check_map_size(*map, &(t_coord){0, 0}))
-		return (close(fd), (void)(silenced || (error_msg(7), 0)),
-			free_double_str(*map), false);
+	{
+		if (*map && !silenced)
+			free_double_str(*map);
+		return (close(fd), (void)(silenced || (error_msg(7), 0)), false);
+	}
 	close(fd);
 	return (true);
 }

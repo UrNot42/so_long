@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:19:22 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/12 20:40:27 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 09:57:18 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	free_triple_str(char ***a)
 {
 	size_t	i;
 
+	if (!a)
+		return ;
 	i = -1;
 	while (a[++i])
 		free_double_str(a[i]);
@@ -37,9 +39,9 @@ void	free_double_str(char **a)
 {
 	size_t	i;
 
-	i = 0;
 	if (!a)
 		return ;
+	i = 0;
 	while (a[i])
 		free(a[i++]);
 	if (a)

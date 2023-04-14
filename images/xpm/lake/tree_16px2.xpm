@@ -1,0 +1,29 @@
+/* XPM */
+static char *tree_16px2[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 7 1 ",
+"% c #542323",
+". c #5B2D2D",
+"X c #643232",
+"o c #4F6837",
+"O c #608241",
+"+ c #688C46",
+"  c None",
+/* pixels */
+"                ",
+"     ++o        ",
+"   .OoOoo       ",
+" Oo o..OoOo     ",
+"+o.Xo Oo..o+    ",
+"Oo .O%.XO  Oo   ",
+"O o O O Oo O.o  ",
+"OO Oo + Xo O o  ",
+" o o  OXXX%OO   ",
+"     X.XX.% O   ",
+"   .X%.X.%  +   ",
+"  .X% X.X.%     ",
+"  X%  .% X.%    ",
+" .%  ..%  X..   ",
+" %   .%    .%   ",
+"     .%     %   "
+};

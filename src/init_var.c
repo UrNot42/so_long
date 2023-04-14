@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 07:32:58 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 05:07:42 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:18:27 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,14 @@ bool	init_world(t_params *param)
  */
 bool	init_display(t_params *param)
 {
-	param->mlx.name = "so_long";
+	param->mlx.name = "Portal Adventure";
 	param->hex_b = 0;
 	param->hex_g = 8;
 	param->hex_r = 16;
 	param->hex_a = 24;
 	if (!init_mlx(&param->mlx, &param->size)
 		|| init_images(param->mlx.ptr, &param->imgs)
-		|| init_sprites(param->mlx.ptr, &param->imgs))
+		|| init_sprites(param->mlx.ptr, &param->imgs, init_meadow_assets))
 		return (close_game(param), false);
 	param->imgs.player.size /= 4;
 	return (true);

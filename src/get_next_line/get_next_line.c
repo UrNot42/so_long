@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 03:40:23 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/07 04:44:23 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 09:53:32 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	*get_next_line(int fd)
 	t_buff_list			*node;
 	int					rd_size;
 
+	if (fd < 0)
+		return (free(head), NULL);
 	if (!head)
 		head = gnl_new_nd(head);
 	node = head;

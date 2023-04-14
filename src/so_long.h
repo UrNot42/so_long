@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:54:43 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 06:01:43 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 10:03:41 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -429,7 +429,7 @@ bool	make_window_image(t_mlx *mlx, t_coord *size);
 
 bool	create_image(void *ptr, t_data *image, char *path);
 bool	create_sprite(void *ptr, t_sprit *sprite, char *path, int frame);
-bool	init_sprites(void *ptr, t_imgs *a);
+bool	init_sprites(void *ptr, t_imgs *a, bool (*init)(void *, t_imgs*));
 bool	init_mc_sprites(void *ptr, t_imgs *a);
 bool	init_other_sprites(void *ptr, t_imgs *a);
 bool	init_images(void *ptr, t_imgs *a);

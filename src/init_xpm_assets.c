@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_xpm_assets.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 15:07:35 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/09 19:44:11 by ulysse           ###   ########.fr       */
+/*   Updated: 2023/04/14 12:06:20 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ bool	init_lake_assets(void *ptr, t_imgs *a)
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->grass, "lake/waterpx", 3);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->wall, "lake/tree_16px", 2);
+		a->err += !create_sprite(ptr, &a->wall, "lake/tree_16px", 4);
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->wall_apo, "lake/fire_tree_16px", 2);
 	return (a->err);
@@ -80,7 +80,7 @@ bool	init_lake_assets(void *ptr, t_imgs *a)
 bool	init_minecraft_assets(void *ptr, t_imgs *a)
 {
 	if (!a->err)
-		a->err = !create_image(ptr, &a->bgd, "mc/grass0.xpm");
+		a->err = !create_image(ptr, &a->bgd, "mc/grass/grass0.xpm");
 	if (!a->err)
 		a->err += !create_image(ptr, &a->fire, "mc/netherack.xpm");
 	if (!a->err)
@@ -90,7 +90,7 @@ bool	init_minecraft_assets(void *ptr, t_imgs *a)
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->exit, "mc/portal", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->grass, "mc/grass", 1);
+		a->err += !create_sprite(ptr, &a->grass, "mc/grass/grass", 1);
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->wall, "mc/tree", 1);
 	if (!a->err)
@@ -113,23 +113,23 @@ bool	init_mc_sprites(void *ptr, t_imgs *a)
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->chest, "mc/chest/chest", 13);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->key, "mc/diamond", 12);
+		a->err += !create_sprite(ptr, &a->key, "mc/diamond/diamond", 12);
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->door, "mc/mc_door", 2);
 	if (!a->err)
 		a->err += !create_sprite(ptr, &a->player, "pacman/pacman_16px", 16);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->a, "tp_pad/a/tp_a_16px", 8);
+		a->err += !create_sprite(ptr, &a->a, "mc/portals/p_", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->b, "tp_pad/b/tp_b_16px", 8);
+		a->err += !create_sprite(ptr, &a->b, "mc/portals/o_", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->t, "tp_pad/t/tp_t_16px", 8);
+		a->err += !create_sprite(ptr, &a->t, "mc/portals/y_", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->x, "tp_pad/x/tp_x_16px", 8);
+		a->err += !create_sprite(ptr, &a->x, "mc/portals/r_", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->y, "tp_pad/y/tp_y_16px", 8);
+		a->err += !create_sprite(ptr, &a->y, "mc/portals/a_", 4);
 	if (!a->err)
-		a->err += !create_sprite(ptr, &a->z, "tp_pad/z/tp_z_16px", 8);
+		a->err += !create_sprite(ptr, &a->z, "mc/portals/g_", 4);
 	if (!a->err)
 		a->err += init_minecraft_assets(ptr, a);
 	if (a->err)

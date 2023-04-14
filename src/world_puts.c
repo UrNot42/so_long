@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 20:46:27 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 00:35:07 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 10:57:09 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	put_hearts(t_params *prm)
 
 	pos = 0;
 	tmp = prm->mlx.pxl_size;
-	prm->mlx.pxl_size = 4;
+	prm->mlx.pxl_size = 6;
 	while (pos < MAX_LIVES)
 	{
 		draw_image(prm, pos * 18 + 2, 2,

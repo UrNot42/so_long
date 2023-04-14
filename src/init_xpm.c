@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 00:29:54 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 14:35:21 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:58:17 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ bool	init_world_imgs(t_params *prm)
 	bool	err;
 
 	err = !create_sprite(prm->mlx.ptr, &prm->world.pane,
-			"w_map/pane/moutain", 3);
+			"w_map/pane/mountain", 3);
 	if (!err)
 		err += !create_sprite(prm->mlx.ptr, &prm->world.pad,
 				"w_map/lvl_pad/lvl_pad_", 2);

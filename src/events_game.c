@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:45:27 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/07 12:36:09 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/14 16:47:11 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,14 @@ void	pickup_sword(t_params *param, int x, int y)
 */
 void	open_door(t_params *param, int x, int y)
 {
-	add_element(param->to_animate, &param->imgs.door, x, y);
+	char	**map;
+
+	map = param->map;
+	if (param->p.sword)
+		map[y][x] = OPENED_DOOR_TILE * (map[y][x] == DOOR_TILE)
+			| KEY_TILE * (map[y][x] == DOOR_KEY_TILE);
+	else
+		add_element(param->to_animate, &param->imgs.door, x, y);
 }
 
 /**

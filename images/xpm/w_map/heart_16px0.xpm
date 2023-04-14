@@ -1,0 +1,28 @@
+/* XPM */
+static char *heart_16px0[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 6 1 ",
+"  c black",
+". c #A00000",
+"X c #B31212",
+"o c #CD4A4A",
+"O c #E48787",
+"+ c None",
+/* pixels */
+"++++++++++++++++",
+"++++++++++++++++",
+"++   +++++   +++",
+"+ ooo +++ ooo ++",
+" oOXXX + oXXXX +",
+" oXXXXX oXXXXX +",
+" oXXXXXoXXXXXX +",
+" XXXXXXoXXXXX. +",
+" XXXXXXXXXXX.. +",
+"+ XXXXXXXXX.. ++",
+"++ XXXXXXX.. +++",
+"+++ XXXXX.. ++++",
+"++++ XXX.. +++++",
+"+++++ ... ++++++",
+"++++++ . +++++++",
+"+++++++ ++++++++"
+};

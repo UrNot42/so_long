@@ -1,0 +1,27 @@
+/* XPM */
+static char *mc_24[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c #21190B",
+". c #413421",
+"X c #695433",
+"o c #9F844D",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOO",
+"OOOoooooooooXOOO",
+"OOOoOOOoOOOoXOOO",
+"OOOoOOOoOOOoXOOO",
+"OOOoooooooooXOOO",
+"OOOoOOOoOOOo OOO",
+"OOOoOOOoOOOoXOOO",
+"OOOoooooooooXOOO",
+"OOOo  ooooooXOOO",
+"OOOooooooooo OOO",
+"OOOoooooooooXOOO",
+"OOOoooooooooXOOO",
+"OOOoooooooooXOOO",
+"OOOXXXXXXXXXXOOO",
+"OOO..........OOO"
+};

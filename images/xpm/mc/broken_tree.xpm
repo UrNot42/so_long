@@ -1,0 +1,25 @@
+/* XPM */
+static char *mc_23[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 3 1 ",
+"  c #582E00",
+". c #92611F",
+"X c None",
+/* pixels */
+"XXXXXXXX.XXXXXXX",
+"XXXXXXXX.XXXXXXX",
+"XXXXXXX. XXX.XXX",
+"XXXXXXX. XXX. XX",
+"XXX..XX..  ..XXX",
+"XXXX .XX...  .XX",
+"XXXXX . .  X XXX",
+"XXXXXX .  XXXXXX",
+"XXXXX... XX XXXX",
+"X..... .. ....XX",
+"XXX   X..  X  .X",
+"XXXX.XXX.  XXX.X",
+"XXXX.XX . XXXXXX",
+"XXXXXXX.. XXXXXX",
+"XXXXXXX.. XXXXXX",
+"XXXXXXX . XXXXXX"
+};

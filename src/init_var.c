@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 07:32:58 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 14:57:50 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 11:44:08 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,11 @@ bool	init_display(t_params *param)
 	param->hex_g = 8;
 	param->hex_r = 16;
 	param->hex_a = 24;
+	param->imgs.player.size = 0;
 	if (!init_mlx(&param->mlx, &param->size)
 		|| init_images(param->mlx.ptr, &param->imgs)
 		|| init_sprites(param->mlx.ptr, &param->imgs, init_meadow_assets))
-		return (close_game(param), false);
+		return (param->imgs.player.size /= 4, close_game(param), false);
 	param->imgs.player.size /= 4;
 	return (true);
 }

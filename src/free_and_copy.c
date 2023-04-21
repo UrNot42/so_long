@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:19:22 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 09:57:18 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 11:38:34 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ char	**copy_double_str(char **dstr)
  */
 void	free_data(t_mlx *mlx, t_data *to_free)
 {
-	if (to_free && mlx->ptr
-		&& to_free->img)
+	if (mlx->ptr && to_free && to_free->img)
 		mlx_destroy_image(mlx->ptr, to_free->img);
 }

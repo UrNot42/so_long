@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 18:10:35 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 00:53:43 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 12:47:28 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	parse_args(int amount, char **arg, t_params *param)
 {
 	if (amount < 2 || !arg[1])
 		return (help_msg(), error_msg(1), false);
-	if (!ft_strncmp(arg[1], "-h\0", 3))
+	if (!(ft_strncmp(arg[1], "-h\0", 3) && ft_strncmp(arg[1], "--help\0", 7)))
 		return (help_msg(), false);
-	if (!ft_strncmp(arg[1], "-m\0", 3))
+	if (!(ft_strncmp(arg[1], "-m\0", 3) && ft_strncmp(arg[1], "--map\0", 6)))
 	{
 		param->mode = 1;
 		param->path = arg[2];
@@ -26,7 +26,7 @@ int	parse_args(int amount, char **arg, t_params *param)
 			return (1);
 		return (error_msg(3), false);
 	}
-	if (!ft_strncmp(arg[1], "-w\0", 3))
+	if (!(ft_strncmp(arg[1], "-w\0", 3) && ft_strncmp(arg[1], "--world\0", 8)))
 	{
 		param->mode = 2;
 		param->path = arg[2];

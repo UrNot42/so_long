@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 21:29:57 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/12 18:04:27 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 12:47:25 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,18 @@ void	help_msg(void)
 	ft_printf("======================================================\n");
 	ft_printf("| -Run a single map:                                 |\n");
 	ft_printf("|      ./so_long -m path/map_name                    |\n");
+	ft_printf("|      ./so_long --map path/map_name                 |\n");
 	ft_printf("|                                                    |\n");
 	ft_printf("| -Run a world folder:                               |\n");
 	ft_printf("|      ./so_long -w path_of_folder/prefix            |\n");
+	ft_printf("|      ./so_long --world path_of_folder"YELLOW"/"
+		GREEN"             |\n");
 	ft_printf("|  [ Inside the folder, map are expected to be       |\n");
-	ft_printf("|    numbered: name1.ber, name2.ber... ]             |\n");
+	ft_printf("|    numbered: prefix1.ber, prefix2.ber... ]         |\n");
 	ft_printf("|                                                    |\n");
 	ft_printf("| -Display help message:                             |\n");
 	ft_printf("|      ./so_long -h                                  |\n");
+	ft_printf("|      ./so_long --help                              |\n");
 	ft_printf("|                                                    |\n");
 	ft_printf("|                                      -by ulevallo- |\n");
 	ft_printf("======================================================\n\n"RESET);

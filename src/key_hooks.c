@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 22:08:58 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/13 23:39:13 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 12:26:28 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	key_press_world_map(int key, t_params *param)
 	}
 	if (is_start(key))
 		return (launch_map(param));
-	return (EXIT_SUCCESS);
+	return (true);
 }
 
 int	key_press_game(int key, t_params *param)

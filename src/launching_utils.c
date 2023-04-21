@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:05:56 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 02:20:21 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 12:58:52 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,15 @@ void	end_map(t_params *param)
 
 int	launch_map(t_params *param)
 {
+	char	**tmp;
+
+	tmp = copy_double_str(param->world.maps[param->world.state]);
 	param->drawn = false;
-	if (!parse_map(param, param->world.maps[param->world.state]))
+	if (!parse_map(param, tmp))
 		return (param->world.completed++, 0);
+	free_double_str(tmp);
+	free_double_str(param->map_save);
+	parse_map(param, param->world.maps[param->world.state]);
 	param->time_prev = 0;
 	ft_printf(RED"=============\n   LEVEL "BLUE"%d\n"RED"=============\n\n\n\n"RESET,
 		param->world.state + 1);

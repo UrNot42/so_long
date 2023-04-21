@@ -6,7 +6,7 @@
 /*   By: ulevallo <ulevallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 02:55:57 by ulevallo          #+#    #+#             */
-/*   Updated: 2023/04/14 12:08:37 by ulevallo         ###   ########.fr       */
+/*   Updated: 2023/04/21 12:08:24 by ulevallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ bool	parse_map(t_params *prm, char **map)
 		return (true);
 	}
 	free_double_str(map);
+	free_double_str(prm->map_save);
 	error_msg(7);
 	return (false);
 }
@@ -104,7 +105,7 @@ bool	map_is_valid(t_params *param, char **map)
 		return (false);
 	param->p.sword = search_sword(maps, &param->p.o);
 	if (!look_for_exit(maps, param->p.o.x, param->p.o.y, param->p.sword))
-		return (error_msg(9), false);
+		return (error_msg(9), free_double_str(map_copy), false);
 	free_double_str(map_copy);
 	if (!copy_map(map, &map_copy, maps))
 		return (false);
